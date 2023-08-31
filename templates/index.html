@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIDACION DE USUARIO</title>
+</head>
+<body>
+    <form action="/login" method="post">
+        <br>
+        <div class="card-header">
+            DIGITE CREDENCIALES DE INGRESO
+        </div>
+        <div class="card-body">
+            <h5>Datos del usuario</h5>
+            <p class="card-text">
+                <div class="form-group">
+                    <label for="txtId">Id</label>
+                    <input id="txtId" required class="dorm-control" type="text" name="txtId">
+                </div>
+                <div class="form-group">
+                    <label for="txtContra">Contraseña</label>
+                    <input id="txtContra" required class="dorm-control" type="password" name="txtContra">
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success" value="Ingresar">
+                </div>
+            </p>
+        </div>
+    </form>
+</body>
+</html>

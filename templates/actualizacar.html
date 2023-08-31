@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACTUALIZAR DATOS DEL CARRITO</title>
+</head>
+<body>
+    <form action="/modificacar" method="post" enctype="multipart/form-data">
+        <br>
+        <div class="card-header">
+            MODIFICACIÓN DE DATOS DE UN CARRITO
+        </div>
+        <div class="card-body">
+            <h5>Datos del carrito</h5>
+            <p class="card-text">
+                <div class="form-group">
+                    <label for="txtPlaca">Placa</label>
+                    <input readonly id="txtPlaca" value="{{car[0]}}" class="dorm-control" type="text" name="txtPlaca">
+                </div>
+                <div class="form-group">
+                    <label for="txtTipo">Tipo</label>
+                    <input id="txtTipo" value="{{car[1]}}" class="dorm-control" type="number" name="txtTipo">
+                </div>
+                <div class="form-group">
+                    <label for="txtValHora">Valor Hora</label>
+                    <input id="txtValHora" value="{{car[2]}}" class="dorm-control" type="number" name="txtValHora">
+                </div>
+                <div class="form-group">
+                    <label for="txtValSem">Valor Semana</label>
+                    <input id="txtValSem" value="{{car[3]}}" class="dorm-control" type="number" name="txtValSem">
+                </div>
+                <div class="form-group">
+                    <label for="txtColor">Color</label>
+                    <input id="txtColor" value="{{car[4]}}" class="dorm-control" type="color" name="txtColor">
+                </div>
+                <div class="form-group">
+                    <label for="txtModelo">Modelo</label>
+                    <input id="txtModelo" value="{{car[5]}}" class="dorm-control" type="number" name="txtModelo">
+                </div>
+                <div class="form-group">
+                    <label for="txtFoto">Foto</label>
+                    <img class="img-thumbnail" width="100" src="/uploads/{{car[8]}}" alt="">
+                    <input id="txtFoto" class="form-control" type="file" name="txtFoto">
+                </div>
+
+                <br>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success" value="Guardar">
+                    <a href="{{url_for('carritos')}}" class="btn brn-primary">Regresar</a>
+                </div>
+            </p>
+        </div>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertar un nuevo Carrito</title>
+</head>
+<body>
+    <form action="/guardacar" method="post" enctype="multipart/form-data">
+        <br>
+        <div class="card-header">
+            CREACIÓN DE UN NUEVO CARRITO
+        </div>
+        <div class="card-body">
+            <h5>Datos del carrito</h5>
+            <p class="card-text">
+                <div class="form-group">
+                    <label for="txtPlaca">Placa</label>
+                    <input id="txtPlaca" value="{{carro[0]}}" type="text" name="txtPlaca">
+                    {{mensaje}}
+                </div>
+                <div class="form-group">
+                    <label for="txtTipo">Tipo</label>
+                    <input id="txtTipo" value="{{carro[1]}}" type="number" name="txtTipo">
+                </div>
+                <div class="form-group">
+                    <label for="txtValHora">Valor Hora</label>
+                    <input id="txtValHora" value="{{carro[2]}}" type="number" name="txtValHora">
+                </div>
+                <div class="form-group">
+                    <label for="txtValSem">Valor Semana</label>
+                    <input id="txtValSem" value="{{carro[3]}}" type="number" name="txtValSem">
+                </div>
+                <div class="form-group">
+                    <label for="txtColor">Color</label>
+                    <input id="txtColor" value="{{carro[4]}}" type="color" name="txtColor">
+                </div>
+                <div class="form-group">
+                    <label for="txtModelo">Modelo</label>
+                    <input id="txtModelo" value="{{carro[5]}}" type="number" name="txtModelo">
+                </div>
+                <div class="form-group">
+                    <label for="txtFoto">Foto</label>
+                    <input id="txtFoto" value="{{carro[6]}}" type="file" name="txtFoto">
+                </div>
+                
+                <br>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success" value="Guardar">
+                    <a href="{{url_for('carritos')}}" class="btn brn-primary">Regresar</a>
+                </div>
+            </p>
+        </div>
+    </form>
+</body>
+</html>

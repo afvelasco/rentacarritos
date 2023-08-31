@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de rentas</title>
+</head>
+<body>
+    <h3>Bienvenido: {{nom}}</h3>
+    <br>
+    <a href="{{url_for('agregarenta')}}" class="btn btn-succes">
+        Ingresar nueva renta
+    </a>
+    <br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>Id renta</th>
+                <th>Placa</th>
+                <th>Licencia</th>
+                <th>Nombre</th>
+                <th>Fecha</th>
+                <th>Kilometraje</th>
+                <th>Observaciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for r in ren %}
+                <tr>
+                    {% for i in range(0,7) %}
+                        <td>{{r[i]}}</td>
+                    {% endfor %}
+                    <td>
+                        <a class="btn btn-warning" href="editarcar/{{r[0]}}">Editar</a>
+                        <a onclick="return confirm('Seguro elimina carrito?')" class="btn btn-danger" href="borracar/{{r[0]}}">Eliminar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>    
+</body>
+</html>

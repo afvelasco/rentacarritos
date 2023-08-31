@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de carritos</title>
+</head>
+<body>
+    <h3>Bienvenido: {{nom}}</h3>
+    <br>
+    <a href="{{url_for('agregacarrito')}}" class="btn btn-succes">
+        Ingresar nuevo carrito
+    </a>
+    <br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>Placa</th>
+                <th>Tipo</th>
+                <th>Valor hora</th>
+                <th>Valor Semana</th>
+                <th>Color</th>
+                <th>Modelo</th>
+                <th>Kilometraje</th>
+                <th>Disponibilidad</th>
+                <th>Foto</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for c in car %}
+                <tr>
+                    {% for i in range(0,9) %}
+                    {% if i==4 %}
+                        <td><input type="color" name="" id="" value="{{c[i]}}"></td>
+                    {% elif i==8 %}
+                        <td>
+                            <img class="img-thumbnail" width="100" src="uploads/{{c[i]}}" alt="">
+                        </td>
+                    {% else %}
+                        <td>{{c[i]}}</td>
+                    {% endif %}
+                    {% endfor %}
+                    <td>
+                        <a class="btn btn-warning" href="editarcar/{{c[0]}}">Editar</a>
+                        <a onclick="return confirm('Seguro elimina carrito?')" class="btn btn-danger" href="borracar/{{c[0]}}">Eliminar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
