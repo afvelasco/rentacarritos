@@ -13,10 +13,10 @@ programa = Flask(__name__)
 programa.secret_key=str(randint(10000,99999))  # Necesario para controlar la creación única de sesiones
 programa.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes = 30)   # define la duración de la sesion
 mysql = MySQL()
-programa.config['MYSQL_DATABASE_HOST']='localhost'
+programa.config['MYSQL_DATABASE_HOST']='db4free.net'
 programa.config['MYSQL_DATABASE_PORT']=3306
-programa.config['MYSQL_DATABASE_USER']='root'
-programa.config['MYSQL_DATABASE_PASSWORD']=''
+programa.config['MYSQL_DATABASE_USER']='usuario12345'
+programa.config['MYSQL_DATABASE_PASSWORD']='Renta1234'
 programa.config['MYSQL_DATABASE_DB']='rentacarritos'
 mysql.init_app(programa)
 losCarritos = Carro(mysql,programa)
