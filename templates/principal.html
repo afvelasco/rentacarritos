@@ -9,19 +9,19 @@
 </head>
 <body>
     <main id="principal"> 
-        <div id="carro">
-            <a href="{{url_for('carritos')}}">Gestión de carritos</a>
+        <div id="padre">
+            <div id="carro" class="vinculos">
+                <a href="{{url_for('carritos')}}">Gestión de carritos</a>
+            </div>
+
+            <div id="cliente" class="vinculos">
+                <a href="{{url_for('clientes')}}">Gestión de clientes</a>
+            </div>
+
+            <div id="renta" class="vinculos">
+                <a href="{{url_for('rentas')}}">Gestión de rentas</a>
+            </div>
         </div>
-        
-        <div id="cliente">
-            <a href="{{url_for('clientes')}}">Gestión de clientes</a>
-        </div>
-            
-        <div id="renta">
-            <a href="{{url_for('rentas')}}">Gestión de rentas</a>
     </main>
 </body>
-
-
-
 </html>
