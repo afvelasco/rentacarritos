@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  transition: all 0.3 ease-in-out;
+}
+
+img{
+  margin: 0;
+  padding: 0;
+}
+
+body, html{
+  margin: 0;
+  padding: 0;
+}
+
+main#principal {
+  background-color: aqua;
+  position: relative;
+}
+
+ #principal #carro{
+  background-color: rgb(207, 65, 229);
+  height: 100px;
+  width: 100px;
+  font-size: 17px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;   
+  }
+
+
+
+
