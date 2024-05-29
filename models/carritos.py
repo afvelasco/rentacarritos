@@ -2,6 +2,7 @@
 Esta clase tendrá como responsabilidad el manejo de la
 persistencia asociada a la tabla de carritos
 '''
+from conexion import *
 from datetime import datetime
 import os
 
@@ -74,4 +75,5 @@ class Carro:
         self.cursor.execute(sql)
         self.conexion.commit()
         
+losCarritos = Carro(mysql,programa)
 

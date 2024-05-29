@@ -1,3 +1,5 @@
+from conexion import *
+
 class Login:
     def __init__(self, miDB):
         self.mysql = miDB
@@ -10,3 +12,5 @@ class Login:
         resultado = self.cursor.fetchall()
         self.conexion.commit()
         return resultado
+
+loguear = Login(mysql)
